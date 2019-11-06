@@ -10,28 +10,28 @@ public class Magpie2 {
 		if(statement.indexOf("69") >= 0){
 			response = "Nice.";
 		}
-		else if (statement.indexOf("no") >= 0) {
+		else if (statement.indexOf(" no ") >= 0) {
 			response = "Why so negative?";
 		} 
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0) {
+		else if (statement.indexOf(" mother ") >= 0
+				|| statement.indexOf(" father ") >= 0
+				|| statement.indexOf(" sister ") >= 0
+				|| statement.indexOf(" brother ") >= 0) {
 			response = "Tell me more about your family.";
 		} 
-		else if(statement.indexOf("dog") >= 0 || statement.indexOf("cat") >= 0){
+		else if(statement.indexOf(" dog ") >= 0 || statement.indexOf(" cat ") >= 0){
 			response = "Tell me more about your filthy animals";
 		}
-		else if(statement.indexOf("mr.") >= 0 || statement.indexOf("mrs.") >= 0){
+		else if(statement.indexOf(" mr. ") >= 0 || statement.indexOf(" mrs. ") >= 0){
 			response = "Your teacher sounds epic.";
 		}
 		else if(statement.trim().length() == 0){
 			response = "Say something Im giving up on youuuuuuuuuu";
 		}
-		else if(statement.indexOf("gamer") >= 0){
+		else if(statement.indexOf(" gamer ") >= 0){
 			response = "Gamers are oppressed";
 		}
-		else if(statement.indexOf("ben") >= 0){
+		else if(statement.indexOf(" ben ") >= 0){
 			response = "Hello Master Benjamin. How may I serve you?";
 		}
 		else {
