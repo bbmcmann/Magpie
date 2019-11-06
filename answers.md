@@ -1,0 +1,2 @@
+Activity 2, question 1:
+    The kkewords in the original code do not account for whitespace on either side of the word. So i added spaces in the if statements and words like 'know' will not trigger expected responses. Epic.
