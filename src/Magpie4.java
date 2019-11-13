@@ -1,33 +1,10 @@
-/**
- * A program to carry on conversations with a human user. This version:
- * <ul>
- * <li>
- * Uses advanced search for keywords</li>
- * <li>
- * Will transform statements as well as react to keywords</li>
- * </ul>
- * 
- * @author Laurie White
- * @version April 2012
- * 
- */
 public class Magpie4 {
-	/**
-	 * Get a default greeting
-	 * 
-	 * @return a greeting
-	 */
+	
 	public String getGreeting() {
 		return "Hello, let's talk.";
 	}
 
-	/**
-	 * Gives a response to a user statement
-	 * 
-	 * @param statement
-	 *            the user statement
-	 * @return a response based on the rules given
-	 */
+	
 	public String getResponse(String statement) {
 		String response = "";
 		if (statement.length() == 0) {
@@ -106,20 +83,7 @@ public class Magpie4 {
 		return "What makes you think that I " + restOfStatement + " you?";
 	}
 
-	/**
-	 * Search for one word in phrase. The search is not case sensitive. This
-	 * method will check that the given goal is not a substring of a longer
-	 * string (so, for example, "I know" does not contain "no").
-	 * 
-	 * @param statement
-	 *            the string to search
-	 * @param goal
-	 *            the string to search for
-	 * @param startPos
-	 *            the character of the string to begin the search at
-	 * @return the index of the first occurrence of goal in statement or -1 if
-	 *         it's not found
-	 */
+	
 	private int findKeyword(String statement, String goal, int startPos) {
 		String phrase = statement.trim().toLowerCase();
 		goal = goal.toLowerCase();
@@ -144,12 +108,7 @@ public class Magpie4 {
 
 			// If before and after aren't letters, we've
 			// found the word
-			if (((before.compareTo("a") < 0) || (before.compareTo("z") > 0)) // before
-																				// is
-																				// not
-																				// a
-																				// letter
-					&& ((after.compareTo("a") < 0) || (after.compareTo("z") > 0))) {
+			if (((before.compareTo("a") < 0) || (before.compareTo("z") > 0)) && ((after.compareTo("a") < 0) || (after.compareTo("z") > 0))) {
 				return psn;
 			}
 
@@ -162,28 +121,11 @@ public class Magpie4 {
 		return -1;
 	}
 
-	/**
-	 * Search for one word in phrase. The search is not case sensitive. This
-	 * method will check that the given goal is not a substring of a longer
-	 * string (so, for example, "I know" does not contain "no"). The search
-	 * begins at the beginning of the string.
-	 * 
-	 * @param statement
-	 *            the string to search
-	 * @param goal
-	 *            the string to search for
-	 * @return the index of the first occurrence of goal in statement or -1 if
-	 *         it's not found
-	 */
+	
 	private int findKeyword(String statement, String goal) {
 		return findKeyword(statement, goal, 0);
 	}
 
-	/**
-	 * Pick a default response to use if nothing else fits.
-	 * 
-	 * @return a non-committal string
-	 */
 	private String getRandomResponse() {
 		final int NUMBER_OF_RESPONSES = 4;
 		double r = Math.random();
